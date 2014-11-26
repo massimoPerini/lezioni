@@ -1,30 +1,31 @@
 #include <stdio.h>
 
-int s(int a)
+int s(int a)    //successivo
 {
     return a+1;
 }
 
-int g(int a)
+int g(int a)    //ritorna a-1 (precedente)
 {
     int n=0;
-    while(s(n)<a) n=s(n);
+    while(s(n)<a)
+        n=s(n);
     return n;
 }
 
-int h(int a, int b)
+int h(int a, int b) //a+b
 {
     if (b==0) return a;
     return h(s(a),g(b));
 }
 
-int j(int a, int b)
+int j(int a, int b) //prodotto
 {
     if (b==0) return 0;
     return h(a,j(a,g(b)));
 }
 
-int k(int a, int b)
+int k(int a, int b) //a^b
 {
     int i;
     if (b==0) return 1;
@@ -38,6 +39,6 @@ int main()
     int a[5]={1,2,2,1024,13};
     int b[5]={1024,2,12,1,2};
     for(i=0;i<5;i=s(i))
-        printf ("%i\n", k(a[i],b[i]));
+        printf ("%i\n", k(a[i],b[i]));      //primo elemento^secondo elemento
 }
 
