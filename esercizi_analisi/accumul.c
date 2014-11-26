@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void f(int a, int b, int *c)    //In c[i] c'è la somma dei resti con valore i della divisione a/b
+void f(int a, int b, int *c)
 {
+    //La soluzione comoda sarebbe mettere il primo numero nella base del secondo e contare quante cifre dello stesso tipo ci sono.
+    //Es. 10 in base 2 è 1010, a questo punto basta contare quanti 1 ci sono (2) e quanti 0 (2). L'array sarà quindi composto da [2,2]
     while(a>0)
     {
         c[a%b]++;
@@ -22,6 +24,7 @@ int main()
 {
     int c1[2]={0,0},c2[10]={0,0,0,0,0,0,0,0,0,0},c3[3]={0,0,0};
     int i;
+    
     
     f(10,2,c1); f(2,2,c1); f(pw(2,12),2,c1);        //[2,2] + [1,1] + [12,1]
     printf ("%i %i\n",c1[0],c1[1]);
