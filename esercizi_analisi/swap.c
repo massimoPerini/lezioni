@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void swap(int *a, int *b)
+void swap(int *a, int *b)   //Inverte i puntatori
 {
     int temp;
     temp = *a;
