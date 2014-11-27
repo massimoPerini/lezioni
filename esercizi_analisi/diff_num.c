@@ -23,15 +23,4 @@ int main()
     printf ("%i\n",f(1*123+1*(123*123*123),123));   //
     printf ("%i\n",f(2+2*123+2*(123*123)+2*(123*123*123),123));
     return (0);
-    
-    printf("%d",fattoriale(3));
-}
-
-
-int fattoriale (int n)
-{
-    if (n<=1)
-        return 1;
-    else
-        return n*fattoriale(n-1);
 }
