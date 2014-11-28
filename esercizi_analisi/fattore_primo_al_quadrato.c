@@ -10,7 +10,7 @@ int f(int n)    //Se n è uguale a 1 o è divisibile ritorna 0 -> se n è primo 
     return 1;
 }
 
-int g(int a, int b) //controlla quante volte b^r (con r >=2) è divisibile per a
+int g(int a, int b) //controlla quante volte b^r (con r >=2) è divisore di a e ritorna r
 {
     int r=1; int e;
     for (e=0;(a%r)==0;r*=b, e++)
