@@ -2,6 +2,7 @@
 #include <string.h>
 
 //La funzione i è sbagliata perchè non ritorna nulla mentre è dovrebbe ritornare un puntatore a char
+//Altrimenti scriverebbe 7 volte b e 1 volta a (127 in base 2)
 
 char* i(char* s, char b)
 {
